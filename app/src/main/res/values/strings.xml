@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Let Tutor</string>
+
+    <!--HOME-->
+    <string name="home_screen">Home</string>
+
+    <!--COURSE-->
+    <string name="course_screen">Course</string>
+
+    <!--TUTOR-->
+    <string name="tutor_screen">Tutor</string>
+
+    <!--UPCOMING-->
+    <string name="upcoming_screen">Upcoming</string>
+
+    <!--SETTING-->
+    <string name="setting_screen">Setting</string>
+</resources>
