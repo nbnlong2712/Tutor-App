@@ -7,4 +7,70 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!--Yellow-->
+    <color name="yellow_0">#FFfefe86</color>
+    <color name="yellow_1">#FFfefe51</color>
+    <color name="yellow_2">#FFfefe02</color>
+    <color name="yellow_3">#FFfef302</color>
+    <color name="yellow_4">#FFfeea02</color>
+    <color name="yellow_5">#FFfee302</color>
+    <color name="yellow_6">#FFfedc02</color>
+    <color name="yellow_7">#FFfedc02</color>
+    <color name="yellow_8">#FFfec802</color>
+    <color name="yellow_9">#FFfebe02</color>
+    <color name="yellow_10">#FFfeb202</color>
+
+    <!--Red-->
+    <color name="red_0">#FFff8d8e</color>
+    <color name="red_1">#FFff6a6b</color>
+    <color name="red_2">#FFff6a6b</color>
+    <color name="red_3">#FFff2929</color>
+    <color name="red_4">#FFff1515</color>
+    <color name="red_5">#FFff1515</color>
+    <color name="red_6">#FFec0000</color>
+    <color name="red_7">#FFd80000</color>
+    <color name="red_8">#FFcb0000</color>
+    <color name="red_9">#FFbe0000</color>
+    <color name="red_10">#FFae0000</color>
+
+    <!--Black-->
+    <color name="black_0">#FFdfdfe0</color>
+    <color name="black_1">#FFc9cbcc</color>
+    <color name="black_2">#FFb4b5b6</color>
+    <color name="black_3">#FF9c9d9d</color>
+    <color name="black_4">#FF878787</color>
+    <color name="black_5">#FF6f6f70</color>
+    <color name="black_6">#FF5a5a5a</color>
+    <color name="black_7">#FF444445</color>
+    <color name="black_8">#FF2d2d2c</color>
+    <color name="black_9">#FF131314</color>
+    <color name="black_10">#FF000000</color>
+
+    <!--Green-->
+    <color name="green_0">#FFaee0b0</color>
+    <color name="green_1">#FF8ce08e</color>
+    <color name="green_2">#FF62e063</color>
+    <color name="green_3">#FF37e038</color>
+    <color name="green_4">#FF00e900</color>
+    <color name="green_5">#FF00dd00</color>
+    <color name="green_6">#FF00d100</color>
+    <color name="green_7">#FF00c400</color>
+    <color name="green_8">#FF00b600</color>
+    <color name="green_9">#FF00a800</color>
+    <color name="green_10">#FF009700</color>
+
+    <!--Blue-->
+    <color name="blue_0">#FFaeedfe</color>
+    <color name="blue_1">#FF7cedfe</color>
+    <color name="blue_2">#FF59edfe</color>
+    <color name="blue_3">#FF30edfe</color>
+    <color name="blue_4">#FF01e0fe</color>
+    <color name="blue_5">#FF16d0fe</color>
+    <color name="blue_6">#FF16c4fe</color>
+    <color name="blue_7">#FF16b3fe</color>
+    <color name="blue_8">#FF16a0fe</color>
+    <color name="blue_9">#FF1685fe</color>
+    <color name="blue_10">#FF166dfe</color>
+
 </resources>
