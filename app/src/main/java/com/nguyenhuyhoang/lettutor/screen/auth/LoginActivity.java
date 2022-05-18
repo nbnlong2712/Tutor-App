@@ -21,9 +21,13 @@ import com.nguyenhuyhoang.lettutor.api.Header;
 import com.nguyenhuyhoang.lettutor.api.auth.AuthApi;
 import com.nguyenhuyhoang.lettutor.api.user.UserApi;
 import com.nguyenhuyhoang.lettutor.components.AuthDialog;
+import com.nguyenhuyhoang.lettutor.components.ProgressIndicator;
 import com.nguyenhuyhoang.lettutor.models.Token;
 import com.nguyenhuyhoang.lettutor.models.User;
 import com.nguyenhuyhoang.lettutor.screen.home.HomeScreenActivity;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -50,20 +54,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         prefs = getApplicationContext().getSharedPreferences("Auth", Context.MODE_PRIVATE);
 
         if (!prefs.getString("access", "").isEmpty()) {
-            showIndicator();
+            ProgressIndicator.showProgress(progress);
             fetchMainUser();
         }
 
         init();
-    }
-
-    void showIndicator() {
-        progress.setCancelable(true);
-        progress.show();
-    }
-
-    void hideIndicator() {
-        progress.dismiss();
     }
 
     void init() {
@@ -88,7 +83,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 final Token[] token = new Token[1];
                 if (edtEmail.getText() != null && edtPassword.getText() != null) {
                     if (!"".contentEquals(edtEmail.getText().toString()) && !"".contentEquals(edtPassword.getText().toString())) {
-                        showIndicator();
+                        ProgressIndicator.showProgress(progress);
                         try {
                             Map<String, String> body = new HashMap<String, String>() {{
                                 put("email", edtEmail.getText().toString());
@@ -103,25 +98,31 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                                         prefs.edit().putString("refresh", token[0].getTokens().getRefresh().getToken()).apply();
                                         fetchMainUser();
                                     } else {
-                                        AuthDialog.showErrorDialog(LoginActivity.this, "Email or password is invalid!");
+                                        try {
+                                            JSONObject jObjError = new JSONObject(response.errorBody().string());
+                                            AuthDialog.showErrorDialog(LoginActivity.this, jObjError.getString("message"));
+                                            ProgressIndicator.hideProgress(progress);
+                                        } catch (JSONException | IOException e) {
+                                            e.printStackTrace();
+                                        }
                                     }
-                                    hideIndicator();
+                                    ProgressIndicator.hideProgress(progress);
                                 }
 
                                 @Override
                                 public void onFailure(Call<Token> call, Throwable t) {
                                     Log.e("ERR", t.getMessage());
-                                    hideIndicator();
+                                    ProgressIndicator.hideProgress(progress);
                                 }
                             });
                         } catch (Exception e) {
                             Log.e("ERRR", e.getMessage());
                             AuthDialog.showErrorDialog(LoginActivity.this, "Failed to login!");
-                            hideIndicator();
+                            ProgressIndicator.hideProgress(progress);
                         }
                     } else {
                         AuthDialog.showErrorDialog(LoginActivity.this, "Please fill enough!");
-                        hideIndicator();
+                        ProgressIndicator.hideProgress(progress);
                     }
                 } else {
                     AuthDialog.showErrorDialog(LoginActivity.this, "Please fill enough!");
@@ -140,13 +141,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     startActivity(new Intent(LoginActivity.this, HomeScreenActivity.class));
                     finish();
                 }
-                hideIndicator();
+                ProgressIndicator.hideProgress(progress);
             }
 
             @Override
             public void onFailure(Call<User> call, Throwable t) {
                 Log.e("ERR", t.getMessage());
-                hideIndicator();
+                ProgressIndicator.hideProgress(progress);
             }
         });
     }

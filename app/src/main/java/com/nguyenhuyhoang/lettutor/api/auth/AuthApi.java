@@ -26,10 +26,10 @@ public interface AuthApi {
     Call<Token> login(@HeaderMap Map<String, String> headers, @Body Map<String, String> body);
 
     @POST("/auth/register")
-    Call<Message> register(@HeaderMap Map<String, String> headers, @Body String email, @Body String password);
+    Call<Void> register(@HeaderMap Map<String, String> headers, @Body Map<String, String> body);
 
     @POST("auth/change-password")
-    Call<Message> changePassword(@HeaderMap Map<String, String> headers, @Body String password, @Body String newPassword);
+    Call<Message> changePassword(@HeaderMap Map<String, String> headers, @Body Map<String, String> body);
 
 
 }

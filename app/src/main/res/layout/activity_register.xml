@@ -46,12 +46,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
+            android:autofillHints=""
             android:background="@drawable/auth_edittext_custom"
             android:hint="@string/type_email"
             android:inputType="textEmailAddress"
             android:padding="15dp"
-            android:textSize="15sp"
-            android:autofillHints="" />
+            android:textSize="15sp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -68,6 +68,7 @@
             android:layout_margin="15dp"
             android:background="@drawable/auth_edittext_custom"
             android:hint="@string/type_password"
+            android:inputType="textPassword"
             android:padding="15dp"
             android:textSize="15sp" />
 
@@ -86,6 +87,7 @@
             android:layout_margin="15dp"
             android:background="@drawable/auth_edittext_custom"
             android:hint="@string/type_password"
+            android:inputType="textPassword"
             android:padding="15dp"
             android:textSize="15sp" />
     </LinearLayout>

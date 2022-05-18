@@ -6,10 +6,10 @@ import cn.pedant.SweetAlert.SweetAlertDialog;
 
 public class AuthDialog {
 
-    public static void showSuccessDialog(Activity activity)
+    public static void showSuccessDialog(Activity activity, String successMessage)
     {
         new SweetAlertDialog(activity, SweetAlertDialog.SUCCESS_TYPE)
-                .setTitleText("Login successful!")
+                .setTitleText(successMessage)
                 .show();
     }
 
