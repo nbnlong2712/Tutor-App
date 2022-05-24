@@ -26,6 +26,8 @@
         <activity android:name=".screen.upcoming.UpcomingScreenActivity"/>
         <activity android:name=".screen.home.HomeScreenActivity"/>
         <activity android:name=".screen.auth.RegisterActivity"/>
+        <activity android:name=".screen.tutor.DetailTutorActivity"/>
+        <activity android:name=".screen.home.ProfileActivity"/>
     </application>
 
 </manifest>

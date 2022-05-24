@@ -19,12 +19,23 @@
 
     <!--HOME-->
     <string name="home_screen">Home</string>
+    <string name="upcoming_lesson">Upcoming Lesson</string>
+    <string name="enter_a_room">Enter a room</string>
+    <string name="specialties">Specialties</string>
+    <string name="booking">Booking</string>
+    <string name="languages">Languages</string>
+    <string name="interests">Interests</string>
+    <string name="rate_and_comment">Rate and comment</string>
 
     <!--COURSE-->
     <string name="course_screen">Course</string>
 
     <!--TUTOR-->
     <string name="tutor_screen">Tutor</string>
+    <string name="tutor_name">Tutor name</string>
+    <string name="tutor_profession">Tutor profession</string>
+    <string name="tutor_country">Tutor country</string>
+    <string name="comment">Comment</string>
 
     <!--UPCOMING-->
     <string name="upcoming_screen">Upcoming</string>
